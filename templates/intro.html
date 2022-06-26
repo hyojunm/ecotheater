@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to EcoTheater</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+</head>
+<body>
+	<div id="intro-text">
+		<h1 class="popup">EcoTheater</h1>
+        <p>A virtual environment for fun and relaxation.</p>
+		<button>
+            <a href="{{url_for('theme_page')}}">Begin</a>
+        </button>
+	</div>
+
+	<div id="intro-img">
+		<img id="tree2" class="popup" src="{{url_for('static', filename='tree2.png')}}" style="top: 8%; left: 57%; width: 42%; height: 79%" />
+		<img id="tree1" class="popup" src="{{url_for('static', filename='tree1.png')}}" style="top: 25%; left: 50%; width: 24%; height: 64%" />
+        <div id="weather">
+            <img />
+            <p></p>
+        </div>
+	</div>
+
+	<div id="intro-footer"></div>
+
+	<script src="{{url_for('static', filename='script.js')}}"></script>
+    <script src="{{url_for('static', filename='api.js')}}"></script>
+</body>
+</html>

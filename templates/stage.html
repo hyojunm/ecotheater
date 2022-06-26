@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EcoTheater Stage</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.js"></script>
+    </head>
+    <body>
+        <div id="buttons">
+            <button id="back-button">
+                <a href="{{url_for('home_page')}}">Back</a>
+            </button>
+            <button id="play-button">Play</button>
+            <button id="watch-button">Watch Movie</button>
+        </div>
+
+        <div id="tutorial">
+            <h3>Welcome to EcoTheater!</h3>
+            <p>Use this space to edit your music, and click on the "Watch Movie" button.</p>
+            <p>Click on any of the squares below to add a note, then adjust the pitch using the buttons below.</p>
+            <p>Click on the images at the bottom to add a new sound to your track.</p>
+        </div>
+
+        <div id="stage">
+            <div>
+                <img src="{{url_for('static', filename='owl1.png')}}" id="p0" class="player popup active" height="130" />
+                <p>Owl (higher octave)</p>
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='owl2.png')}}" id="p1" class="player popup" height="130" />
+                <p>Owl (lower octave)</p>
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='bird.png')}}" id="p2" class="player popup" height="130" />
+                <p>Bird</p>
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='wind.png')}}" id="p3" class="player popup" height="130" />
+                <p>Wind</p>
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='foot.png')}}" id="p4" class="player popup" height="130" />
+                <p>Footsteps on grass</p>
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='stream.png')}}" id="p5" class="player popup" height="130" />
+                <p>River</p>
+            </div>
+        </div>
+
+        <div id="beats">
+            <div class="beat">
+                <div id="c1" class="square"></div>
+                <div id="c2" class="square"></div>
+                <div id="c3" class="square"></div>
+                <div id="c4" class="square"></div>
+            </div>
+            <div class="beat">
+                <div id="c5" class="square"></div>
+                <div id="c6" class="square"></div>
+                <div id="c7" class="square"></div>
+                <div id="c8" class="square"></div>
+            </div>
+            <div class="beat">
+                <div id="c9" class="square"></div>
+                <div id="c10" class="square"></div>
+                <div id="c11" class="square"></div>
+                <div id="c12" class="square"></div>
+            </div>
+            <div class="beat">
+                <div id="c13" class="square"></div>
+                <div id="c14" class="square"></div>
+                <div id="c15" class="square"></div>
+                <div id="c16" class="square"></div>
+            </div>
+        </div>
+
+        <div id="notes">
+            <div id="n0" class="note">C</div>
+            <div id="n1" class="note">Db</div>
+            <div id="n2" class="note">D</div>
+            <div id="n3" class="note">Eb</div>
+            <div id="n4" class="note">E</div>
+            <div id="n5" class="note">F</div>
+            <div id="n6" class="note">Gb</div>
+            <div id="n7" class="note">G</div>
+            <div id="n8" class="note">Ab</div>
+            <div id="n9" class="note">A</div>
+            <div id="n10" class="note">Bb</div>
+            <div id="n11" class="note">B</div>
+        </div>
+
+        <div id="theater"></div>
+        
+        <div id="intro-img">
+            <img id="tree1" class="popup" src="{{url_for('static', filename='tree1.png')}}" style="top: 25%; left: -3%; width: 24%; height: 64%" />
+            <img id="tree1" class="popup" src="{{url_for('static', filename='tree1.png')}}" style="top: 25%; right: -3%; width: 24%; height: 64%" />
+        </div>
+
+        <div id="weather">
+            <img />
+            <p></p>
+        </div>
+        
+        <div id="intro-footer"></div>
+
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        <script src="{{url_for('static', filename='api.js')}}"></script>
+    </body>
+</html>
