@@ -172,7 +172,7 @@ $("#play-button").click(() => {
 $("#watch-button").click(() => {
     $("body > *").hide();
     $("#theater").show();
-    $("#theater").css("background-image", "url('../static/forest.jpeg')");
+    $("#theater").css("background-image", "url('../static/images/forest.jpeg')");
     document.documentElement.requestFullscreen();
     playback(true);
 });
